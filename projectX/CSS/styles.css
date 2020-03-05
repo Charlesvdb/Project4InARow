@@ -1,0 +1,65 @@
+body {
+    font-size: 12px;
+}
+
+.textarea {
+    float: left;
+    width: 45%;
+    height: 702px;
+    background-color: beige; 
+}
+
+.newgamebutton {
+    display: flex;
+    width: 250px;
+    height: 70px;
+    font-size: 2.1em;
+    background-color: blue;
+    color: white;
+    border: 2px solid white;
+}
+
+.buttonarea {
+    height: 25%; 
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statsarea {
+    height: 75%;
+    font-size: 1.7em;
+}
+
+.gridarea {
+    float: right;
+    width: 55%;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gridcenter {
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    height: 105px;
+    width: 105px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px;
+    border: 2px solid black;
+}   
+
+.red {
+    background-color: red;  
+}
+
+.yellow {
+    background-color: yellow;
+}
