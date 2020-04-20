@@ -1,7 +1,7 @@
 class Game {
     constructor() {
         this.player1 = new Player("Charles","Van den Bergh","yellow","play");
-        this.player2 = new Player("Christophe","Gillis","red","wait"); 
+        this.player2 = new Player("Aurelie","Van den Bergh","red","wait"); 
         this.board = new Board(this);
         this.chronometer = new Chronometer()
         this.currentTime = 0;
@@ -47,23 +47,35 @@ class Game {
         }
     }
 
-    checkIfFourInARow() {
-        for(var i=0; i<this.board.grid.length; i++) {
-            
-        }
-    }
 
-    checkIfHorizontalWinner() {}
 
-    checkIfVerticalWinner() {}
+    // checkIfHorizontalWinnerRed(this.board.grid,number) {
+    //     var timesInARowYellow = 0;
+    //     for(var i=0; i<this.board.grid.length;i++) {
+    //         for(var j=0; j + number<this.board.grid[i].length; j++) {
+    //             if(this.board.grid[i][j] == coin && coin.color == "red") {
+    //                 timesInARowYellow++
+    //             }
+    //         }
+    //     }
+    //     console.log(timesInARowYellow)
+    //     if(timesInARowYellow === 4) {
+    //         console.log("Red has in a row!")
+    //         return "Winner"
+    //     }
+    // }
 
-    checkIfDiagonalWinner() {}
 
-    checkIfGameHasWinner() {
-        checkIfHorizontalWinner()
-        checkIfVerticalWinner()
-        checkIfDiagonalWinner()
-    }
+
+    // checkIfVerticalWinnerYellow(this.board.grid,number) {}
+
+    // checkIfDiagonalWinnerYellow(this.board.grid,number) {}
+
+    // checkIfGameHasWinnerYellow(this.board.grid,number) {
+    //     checkIfHorizontalWinnerYellow()
+    //     checkIfVerticalWinnerYellow()
+    //     checkIfDiagonalWinnerYellow()
+    // }
 }
 
 let game = new Game();

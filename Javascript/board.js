@@ -51,6 +51,19 @@ class Board {
         }
     }
 
+    checkIfHorizontalWinner() {
+        for(var i=0; i<this.grid.length;i++) {
+            for(var j=0; j <this.grid[0].length - 3; j++) {
+                if(!(this.grid[i][j] && this.grid[i][j +1] && this.grid[i][j +2] && this.grid[i][j+3])) continue; // null check
+                if(this.grid[i][j].color == this.grid[i][j+1].color &&
+                   this.grid[i][j+1].color == this.grid[i][j+2].color &&
+                   this.grid[i][j+2].color == this.grid[i][j+3].color) {
+                    return this.grid[i][j].color;
+                }
+            }
+        }
+    }
+
     createCoin() {        
         if(game.whosTurnIsIt() == game.player1) {
             return new Coin(game.player1.color);    
@@ -74,6 +87,10 @@ class Board {
         game.changePlayer()
         game.whosTurnIsIt()
         game.countAmountOfCoins()
+        let winner = this.checkIfHorizontalWinner();
+        if(winner) {
+            alert(`${winner} won the game!`);
+        }
     }
 }
 
